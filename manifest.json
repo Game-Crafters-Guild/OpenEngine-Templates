@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "name": "OpenEngine Templates",
+  "projects": [
+    {
+      "id": "blank",
+      "name": "Blank",
+      "description": "An empty scene: a camera, a sun and a sky.",
+      "author": "Game Crafters Guild",
+      "engineVersion": "2026.10.0-alpha.4",
+      "thumbnail": "templates/blank/thumbnail.png",
+      "accentColor": "#315B86",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/Game-Crafters-Guild/OpenEngine-Templates",
+        "path": "templates/blank"
+      }
+    },
+    {
+      "id": "basic3d",
+      "name": "Basic 3D",
+      "description": "A lit scene with primitives to build on.",
+      "author": "Game Crafters Guild",
+      "engineVersion": "2026.10.0-alpha.4",
+      "thumbnail": "templates/basic3d/thumbnail.png",
+      "accentColor": "#5A67A7",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/Game-Crafters-Guild/OpenEngine-Templates",
+        "path": "templates/basic3d"
+      }
+    }
+  ]
+}

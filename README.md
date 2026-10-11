@@ -1,26 +1,44 @@
 # OpenEngine Templates
 
-Home for OpenEngine **project templates** beyond the ones baked into the
-editor.
+The OpenEngine editor's built-in project templates, published as a catalog.
 
-## Where templates live today
+## What is here
 
-The editor's built-in templates (Blank, Basic 3D, Open World) are **baked into
-the editor build** — they ship as `<editor>/ProjectTemplates/` next to the
-executable, sourced from `Apps/Editor/ProjectTemplates/` in the engine repo.
-That's deliberate: creating a Blank project must always work, offline, with no
-network dependency.
+| Template | Contents |
+| --- | --- |
+| [Blank](templates/blank) | An empty scene: a camera, a sun with shadows, a sky and a post-process volume. |
+| [Basic 3D](templates/basic3d) | The same scene with a ground plane, four cubes and an editable `Default` material. |
 
-## What this repo is for
+These mirror the templates built into the editor (`Apps/Editor/ProjectTemplates/` in the
+engine repository), which ship next to the editor so creating a project always works
+offline. This repository tracks them; when the two differ, the editor's copy is the
+reference.
 
-Downloadable template packs that don't need to ship with every install
-(genre starters, larger demo content). These use the same manifest schema as
-the [community catalog](https://github.com/Game-Crafters-Guild/OpenEngine-Community-Projects) —
-a root `manifest.json` whose entries point at subfolders via
-`source: { "type": "git", "url": ..., "path": ... }`. The editor fetches a
-manifest and sparse-clones only the selected template's subtree.
+Each template is a project root: an `Assets/` folder whose only scene is
+`Assets/Scenes/Main.scene`, which a new project opens on. Neither template names a render
+pipeline, so both draw with the engine's ForwardPlus pipeline.
 
-The editor doesn't consume this repo yet; wiring a second (remote) template
-source into the New Project → Templates tab is a planned follow-up. Until
-then, contribute built-in template changes to the engine repo, and larger
-sample projects to the community catalog.
+## Layout
+
+- `manifest.json` lists the templates in the same schema as the
+  [community catalog](https://github.com/Game-Crafters-Guild/OpenEngine-Community-Projects):
+  each entry's `source` is `{ "type": "git", "url": ..., "path": "templates/<id>" }`, and
+  the editor sparse-clones only that folder.
+- `templates/<id>/` holds the project and its `thumbnail.png`.
+
+## Using this catalog in the editor
+
+The editor reads one remote catalog, shown on the **New project → Community** tab. To list
+these templates there instead of the community projects, set `communityManifestSource` in
+the editor's `Preferences.json` to:
+
+```
+https://raw.githubusercontent.com/Game-Crafters-Guild/OpenEngine-Templates/main/manifest.json
+```
+
+Remove the key to return to the community catalog. The editor does not yet read a second
+remote catalog alongside the first.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
