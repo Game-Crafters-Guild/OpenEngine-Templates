@@ -33,7 +33,7 @@ Camera.enabled = true
 HierarchyOrder.order = 30
 Name.value = "Main Camera"
 Transform.position = (0, 3, -10)
-Transform.rotation = (0, 0, 0, 1)
+Transform.rotation = (0.0871557, 0, 0, 0.9961947)
 Transform.scale = (1, 1, 1)
 
 [entity id="post_process_volume"]
@@ -48,7 +48,7 @@ Transform.scale = (1, 1, 1)
 [entity id="plane"]
 HierarchyOrder.order = 50
 MeshRenderer.meshPrimitive = Plane
-MeshRenderer.material = [path="Materials/Default.material"]
+MeshRenderer.material = [path="Materials/Ground.material"]
 Name.value = "Plane"
 PhysicsBody.motionType = 0
 PhysicsBody.gravityScale = 0
@@ -111,6 +111,6 @@ pos_x = 0
 pos_y = 3
 pos_z = -10
 yaw_deg = 90
-pitch_deg = 0
+pitch_deg = -10
 distance = 6
 is_2d = false
