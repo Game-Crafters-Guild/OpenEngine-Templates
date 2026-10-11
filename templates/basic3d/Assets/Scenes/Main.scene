@@ -33,7 +33,7 @@ Camera.enabled = true
 HierarchyOrder.order = 30
 Name.value = "Main Camera"
 Transform.position = (0, 3, -10)
-Transform.rotation = (0.0871557, 0, 0, 0.9961947)
+Transform.rotation = (0.08715574274765817, 0, 0, 0.9961946980917455)
 Transform.scale = (1, 1, 1)
 
 [entity id="post_process_volume"]
