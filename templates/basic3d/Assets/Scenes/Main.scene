@@ -49,21 +49,21 @@ Transform.scale = (1, 1, 1)
 HierarchyOrder.order = 50
 MeshRenderer.meshPrimitive = Plane
 MeshRenderer.material = [path="Materials/Ground.material"]
-Name.value = "Plane"
+Name.value = "Ground"
 PhysicsBody.motionType = 0
 PhysicsBody.gravityScale = 0
 PhysicsCollider.layer = 0
 PlaneColliderShape.normal = (0, 1, 0)
 Transform.position = (0, 0, 0)
 Transform.rotation = (0, 0, 0, 1)
-Transform.scale = (100, 1, 100)
+Transform.scale = (1000, 1, 1000)
 
 [entity id="cube"]
 BoxColliderShape.halfExtents = (0.5, 0.5, 0.5)
 HierarchyOrder.order = 70
 MeshRenderer.meshPrimitive = Cube
 MeshRenderer.material = [path="Materials/Default.material"]
-Name.value = "Cube"
+Name.value = "Cube Left"
 PhysicsBody.motionType = 2
 PhysicsCollider.layer = 1
 Transform.position = (-2, 0.5, 2)
@@ -75,7 +75,7 @@ BoxColliderShape.halfExtents = (0.5, 0.5, 0.5)
 HierarchyOrder.order = 80
 MeshRenderer.meshPrimitive = Cube
 MeshRenderer.material = [path="Materials/Default.material"]
-Name.value = "Cube"
+Name.value = "Cube Center"
 PhysicsBody.motionType = 2
 PhysicsCollider.layer = 1
 Transform.position = (0, 0.5, 2)
@@ -87,7 +87,7 @@ BoxColliderShape.halfExtents = (0.5, 0.5, 0.5)
 HierarchyOrder.order = 90
 MeshRenderer.meshPrimitive = Cube
 MeshRenderer.material = [path="Materials/Default.material"]
-Name.value = "Cube"
+Name.value = "Cube Right"
 PhysicsBody.motionType = 2
 PhysicsCollider.layer = 1
 Transform.position = (2, 0.5, 2)
@@ -99,7 +99,7 @@ BoxColliderShape.halfExtents = (0.5, 0.5, 0.5)
 HierarchyOrder.order = 100
 MeshRenderer.meshPrimitive = Cube
 MeshRenderer.material = [path="Materials/Default.material"]
-Name.value = "Cube"
+Name.value = "Cube Stacked"
 PhysicsBody.motionType = 2
 PhysicsCollider.layer = 1
 Transform.position = (0, 1.5, 2)

@@ -6,9 +6,15 @@
   "doubleSided": false,
   "surfaceShader": "Surfaces/standard_pbr.glsl",
   "properties": {
-    "baseColor": [0.45, 0.45, 0.45, 1.0],
+    "baseColor": [1.0, 1.0, 1.0, 1.0],
     "metallic": 0.0,
     "roughness": 0.5
   },
-  "textures": {}
+  "textures": {
+    "albedoMap": {
+      "guid": "2a1825fa-238c-4296-8101-fe69f1b7e686",
+      "path": "Textures/GroundGrid.png",
+      "tiling": [1000.0, 1000.0]
+    }
+  }
 }
