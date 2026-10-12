@@ -30,6 +30,7 @@ Transform.scale = (1, 1, 1)
 
 [entity id="main_camera"]
 Camera.enabled = true
+Camera.farZ = 1000
 HierarchyOrder.order = 30
 Name.value = "Main Camera"
 Transform.position = (0, 3, -10)
@@ -37,6 +38,22 @@ Transform.rotation = (0.08715574274765817, 0, 0, 0.9961946980917455)
 Transform.scale = (1, 1, 1)
 
 [entity id="post_process_volume"]
+; Horizon haze in the sky's own horizon color at every time of day. It starts 50 m out and is
+; dense only in the last few degrees below the horizon, from the default camera and from 40 m up.
+; At 1000 m, the Main Camera's far clip, the ground is fogged as much as the sky below the
+; horizon (97 and 98 percent), so the end of the ground does not show; the ground reaches past
+; it. The Scene View's far clip (3000 m) sees the ground end at 2000 m, where the fog holds at
+; the same 97 percent: invisible by day, a faint line under the Scene View's night exposure.
+HeightFogEffect.enabled = true
+HeightFogEffect.intensity = 1
+HeightFogEffect.density = 1
+HeightFogEffect.maxOpacity = 1
+HeightFogEffect.minDistance = 50
+HeightFogEffect.smoothLength = 100
+HeightFogEffect.maxDistance = 1000
+HeightFogEffect.heightFogEnabled = false
+HeightFogEffect.colorMode = 1
+HeightFogEffect.skyFillEnd = 0.05
 HierarchyOrder.order = 40
 Name.value = "Post Process Volume"
 PostProcessVolume.enabled = true
@@ -56,7 +73,7 @@ PhysicsCollider.layer = 0
 PlaneColliderShape.normal = (0, 1, 0)
 Transform.position = (0, 0, 0)
 Transform.rotation = (0, 0, 0, 1)
-Transform.scale = (1000, 1, 1000)
+Transform.scale = (4000, 1, 4000)
 
 [entity id="cube"]
 BoxColliderShape.halfExtents = (0.5, 0.5, 0.5)
