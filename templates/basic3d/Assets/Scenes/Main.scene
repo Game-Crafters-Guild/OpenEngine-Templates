@@ -30,7 +30,7 @@ Transform.scale = (1, 1, 1)
 
 [entity id="main_camera"]
 Camera.enabled = true
-Camera.farZ = 1000
+Camera.farZ = 3000
 HierarchyOrder.order = 30
 Name.value = "Main Camera"
 Transform.position = (0, 3, -10)
@@ -38,19 +38,19 @@ Transform.rotation = (0.08715574274765817, 0, 0, 0.9961946980917455)
 Transform.scale = (1, 1, 1)
 
 [entity id="post_process_volume"]
-; Horizon haze in the sky's own horizon color at every time of day. It starts 50 m out and is
+; Horizon haze in the sky's own horizon color at every time of day. It starts 150 m out and is
 ; dense only in the last few degrees below the horizon, from the default camera and from 40 m up.
-; At 1000 m, the Main Camera's far clip, the ground is fogged as much as the sky below the
-; horizon (97 and 98 percent), so the end of the ground does not show; the ground reaches past
-; it. The Scene View's far clip (3000 m) sees the ground end at 2000 m, where the fog holds at
-; the same 97 percent: invisible by day, a faint line under the Scene View's night exposure.
+; The ground reaches 3000 m from the origin, the Main Camera's far clip. Past the fog's maxDistance
+; the ground is fogged to 97.5 percent while the sky fill below the horizon reaches 98 percent, so by
+; day the end of the ground does not show; that 0.5-point gap is the fog model's, not the far clip's,
+; and under the Scene View's brighter night exposure it still reads as a faint line where the ground ends.
 HeightFogEffect.enabled = true
 HeightFogEffect.intensity = 1
 HeightFogEffect.density = 1
 HeightFogEffect.maxOpacity = 1
-HeightFogEffect.minDistance = 50
-HeightFogEffect.smoothLength = 100
-HeightFogEffect.maxDistance = 1000
+HeightFogEffect.minDistance = 150
+HeightFogEffect.smoothLength = 150
+HeightFogEffect.maxDistance = 3000
 HeightFogEffect.heightFogEnabled = false
 HeightFogEffect.colorMode = 1
 HeightFogEffect.skyFillEnd = 0.05
@@ -73,7 +73,7 @@ PhysicsCollider.layer = 0
 PlaneColliderShape.normal = (0, 1, 0)
 Transform.position = (0, 0, 0)
 Transform.rotation = (0, 0, 0, 1)
-Transform.scale = (4000, 1, 4000)
+Transform.scale = (6000, 1, 6000)
 
 [entity id="cube"]
 BoxColliderShape.halfExtents = (0.5, 0.5, 0.5)
