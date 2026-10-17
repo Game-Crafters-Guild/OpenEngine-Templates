@@ -7,7 +7,7 @@
       "name": "Blank",
       "description": "An empty scene: a camera, a sun and a sky.",
       "author": "Game Crafters Guild",
-      "engineVersion": "2026.10.0-alpha.5",
+      "engineVersion": "2026.10.0-alpha.6",
       "thumbnail": "templates/blank/thumbnail.png",
       "accentColor": "#315B86",
       "source": {
@@ -21,7 +21,7 @@
       "name": "Basic 3D",
       "description": "A lit scene with primitives to build on.",
       "author": "Game Crafters Guild",
-      "engineVersion": "2026.10.0-alpha.5",
+      "engineVersion": "2026.10.0-alpha.6",
       "thumbnail": "templates/basic3d/thumbnail.png",
       "accentColor": "#5A67A7",
       "source": {
